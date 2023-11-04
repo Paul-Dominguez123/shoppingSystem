@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    background-color: rgb(228, 102, 83);
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 60px;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    padding-left: 20px;
+}
+
+.menu-icon {
+    display: none; /* Ocultar el icono en pantallas grandes */
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 160px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    color: #333;
+}
+
+
+/* Estilos para pantallas pequeñas (menú dropdown) */
+@media (max-width: 950px) {
+    
+    .menu-icon {
+        display: block; /* Mostrar el icono en pantallas pequeñas */
+        
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        background-color: rgb(228, 102, 83);
+        width: 100vw;
+        height: auto;
+        padding-left:20px ;
+        padding-bottom: 20px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+}
+
+main{
+    margin-top: 60px;
+}
